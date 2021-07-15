@@ -9,7 +9,7 @@ steps:
     title: Cloning main repository...
     stage: prepare
     type: git-clone
-    repo: 'codefresh-contrib/spring-boot-2-sample-app'
+    repo: 'cibexon/epam_java_test'
     revision: master
     git: github
   run_unit_tests:
