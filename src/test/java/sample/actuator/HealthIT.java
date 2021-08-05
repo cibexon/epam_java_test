@@ -44,7 +44,7 @@ public class HealthIT {
 	@Test
     public void fullMessage() {
 		given().when().get("/")
-            .then().body("message",equalTo("Spring boot says hello from a Docker container, version 3"));
+            .then().body("message",equalTo("Spring boot says hello from a Docker container, version 4"));
     }
 	
 	@Test
