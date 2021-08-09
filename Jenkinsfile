@@ -12,16 +12,15 @@ pipeline {
       			  script {
                     		def customImage = docker.build("cibexon/jenkins_docker_pull")
                     		customImage.push() 	
-	
- 
+			  }	 
 
- 	triggers {
-        	githubPush()
-        	//pollSCM('') or this one, empty quotes tells it to build on a push
- 	}
- 	      		  }
 	    		} 
 		}
       
 	}
+	triggers {
+                githubPush()
+                //pollSCM('') or this one, empty quotes tells it to build on a push
+        }
+
 }
