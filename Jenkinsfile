@@ -1,6 +1,7 @@
 pipeline {
-    agent { 
-	  label 'ubuntu_node1' 
+    	agent { 
+	  label 'ubuntu_node1'
+    	}
  	stages {
 
    		stage('get git repo') {
@@ -23,5 +24,4 @@ pipeline {
 		}
       
 	}
-    }
 }
