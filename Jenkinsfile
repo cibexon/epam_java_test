@@ -15,8 +15,10 @@ pipeline {
 
 		stage('Stop and remove all containers and images') {
 			steps {
-				sh "cont=$(docker container ps -a | grep -i java | cut -d" " -f1);docker container stop $cont;docker container rm $cont;docker rmi -f $(docker images -a -q)
-				sh "echo "All images and container are successfully removed from the Node1""
+				sh '''cont=$(docker container ps -a | grep -i java | cut -d" " -f1)
+				      docker container stop $cont;docker container rm $cont;docker rmi -f $(docker images -a -q)
+				      echo "All images and container are successfully removed from the Node1"
+				'''
 			}
 		}
  
