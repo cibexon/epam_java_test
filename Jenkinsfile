@@ -8,6 +8,7 @@ pipeline {
 				//git([url: 'https://github.com/ismailyenigul/hacicenkins.git', branch: 'master', credentialsId: 'ismailyenigul-github-user-token'])   or this way, specify branch and connect
       			  script {
                     		def customImage = docker.build("cibexon/jenkins_docker_pull:v1")
+				def customImage = docker.build("cibexon/jenkins_docker_pull:v2")
                     		customImage.push()
 			  }
 			}
