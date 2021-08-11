@@ -9,7 +9,8 @@ pipeline {
       			  script {
                     		def customImage = docker.build("cibexon/jenkins_docker_pull:v1")
 				def customImage = docker.build("cibexon/jenkins_docker_pull:v2")
-                    		customImage.push()
+                    		customImage.push('v1')
+				customImage.push('v2')
 			  }
 			}
 		}
