@@ -7,9 +7,9 @@ pipeline {
       				git 'https://github.com/cibexon/epam_java_test'
 				//git([url: 'https://github.com/ismailyenigul/hacicenkins.git', branch: 'master', credentialsId: 'ismailyenigul-github-user-token'])   or this way, specify branch and connect
       			  script {
-                    		def customImageV1 = docker.build("cibexon/jenkins_docker_pull:jenk_img")
+                    		def customImageV1 = docker.build("cibexon/jenkins_docker_pull:v1")
 			//	def customImageV2 = docker.build("cibexon/jenkins_docker_pull:v2")
-                    		customImageV1.push('jenk_img')
+                    		customImageV1.push('v1')
 			//	customImageV2.push('v2')
 			  }
 			}
